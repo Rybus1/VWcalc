@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nouislider.min.css">
+    <title>Document</title>
+</head>
+
+<body style="display: flex; flex-direction: column">
+    <span>Pixels</span>
+    <input class="inputpix" type="text">
+    <br>
+    <br>
+    <span>Window size (WV) in pixels</span>
+    <input class="inputsize" type="text">
+    <br>
+    <br>
+    <span class="output">0</span>
+</body>
+<script>
+    let input1 = document.querySelector('.inputpix');
+    let input2 = document.querySelector('.inputsize');
+    let output = document.querySelector('.output');
+    input1.addEventListener('change', () => {
+        output.innerHTML = `${((input1.value / input2.value) * 100).toFixed(2)}vw`;
+    })
+
+</script>
+
+</html>
